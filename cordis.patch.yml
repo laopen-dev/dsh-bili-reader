@@ -1,0 +1,35 @@
+# ============================================================================
+# dsh-bili-reader —— DSH bundle patch
+# ============================================================================
+# 只插一行：把这个插件挂进 profile 的配置树。
+#
+# 安装（本地开发，link 到源码目录；由主人自己执行）：
+#   dsh plugin --profile desktop add "link:<你的用户目录>\.dsh\plugins\dsh-bili-reader"
+# 或发布后：
+#   dsh plugin --profile desktop add dsh-bili-reader
+#
+# ⚠️ `name:` 必须与安装后的**包名**完全一致（这里是 dsh-bili-reader）。
+#
+# 下面这几项就是全部配置；不写也能跑（插件内部有同样的默认值）。
+# cliPath / nodePath 留空时按以下顺序自动找：
+#   cliPath  : <DSH_HOME>/plugins/dsh-bili-whale/tools/bili.mjs
+#   nodePath : <DSH_HOME>/dsh-runtimes/dsh-primary-runtime/dependencies/node/bin/node.exe
+# 换机器或路径不同时，在这里显式写死（Windows 路径用单引号，反斜杠不用转义）。
+# ============================================================================
+
+- insert:
+    - id: dsh-bili-reader
+      name: dsh-bili-reader
+      config:
+        # bili-whale 的 CLI 绝对路径；留空 = 用上面的默认推导
+        # cliPath: '<你的用户目录>\.dsh\plugins\dsh-bili-whale\tools\bili.mjs'
+        # 跑 CLI 的 node 绝对路径（PATH 里没有 node，所以必须绝对路径）；留空 = 自动找
+        # nodePath: '<你的用户目录>\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\node\bin\node.exe'
+        # 每次读是否默认抽帧（慢：要下视频 + ffmpeg）；默认 false
+        defaultFrames: false
+        # 批量读取的默认并发（上限 3）
+        concurrency: 2
+        # 单次子代理的等待上限（秒）；批量里每个视频各自计时
+        timeoutSec: 180
+        # 子代理提供方（@deepseek-ai/dsh-subagent-spawn-in-process 的 providerName）
+        provider: spawn

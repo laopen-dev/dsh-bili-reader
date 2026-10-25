@@ -1,0 +1,51 @@
+{
+  "name": "dsh-bili-reader",
+  "version": "0.2.0",
+  "description": "只读地把 B 站视频阅读外包给子代理：主会话只收结构化摘要（bili_read / bili_read_batch），并自动向系统提示注入使用规则——装一个包就够。",
+  "author": "老盆 (LaoPen)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laopen-dev/dsh-bili-reader.git"
+  },
+  "homepage": "https://github.com/laopen-dev/dsh-bili-reader#readme",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "bilibili",
+    "subagent"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "prompts",
+    "locale",
+    "tools",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "selfcheck": "node tools/selfcheck.mjs"
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.3"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}

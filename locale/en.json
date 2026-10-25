@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Bili Reader",
+    "description": "Read Bilibili videos through subagents: the main conversation only receives a structured digest."
+  }
+}

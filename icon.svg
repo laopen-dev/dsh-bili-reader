@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Bili Reader">
+  <rect x="4" y="8" width="56" height="44" rx="8" fill="#0f2a3d"/>
+  <rect x="4" y="8" width="56" height="44" rx="8" fill="none" stroke="#5ee0c4" stroke-width="2.5"/>
+  <rect x="12" y="14" width="30" height="3" rx="1.5" fill="#5ee0c4" opacity="0.85"/>
+  <rect x="12" y="21" width="40" height="3" rx="1.5" fill="#8fb8c9" opacity="0.7"/>
+  <rect x="12" y="28" width="34" height="3" rx="1.5" fill="#8fb8c9" opacity="0.55"/>
+  <rect x="12" y="35" width="24" height="3" rx="1.5" fill="#8fb8c9" opacity="0.4"/>
+  <path d="M40 30.5v11.5a5 5 0 0 1-7.5 4.3v-3.4a2 2 0 0 0 3-1.7v-10.7z" fill="#ff7a9c"/>
+  <circle cx="49" cy="45" r="9" fill="#0f2a3d" stroke="#ff7a9c" stroke-width="2.5"/>
+  <path d="M46 41.5l6 3.5-6 3.5z" fill="#ff7a9c"/>
+</svg>

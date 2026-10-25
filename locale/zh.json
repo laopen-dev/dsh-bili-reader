@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "B 站读片（只读）",
+    "description": "把读 B 站视频的活交给子代理，主会话只收一份结构化摘要（bili_read / bili_read_batch）。"
+  }
+}
